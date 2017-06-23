@@ -8,19 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		F904E8761EFD05CE00CB0799 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F904E8751EFD05CE00CB0799 /* AppDelegate.swift */; };
-		F904E8781EFD05CE00CB0799 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F904E8771EFD05CE00CB0799 /* ViewController.swift */; };
-		F904E87A1EFD05CE00CB0799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F904E8791EFD05CE00CB0799 /* Assets.xcassets */; };
+		F904E8781EFD05CE00CB0799 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F904E8771EFD05CE00CB0799 /* WeatherVC.swift */; };
 		F904E87D1EFD05CE00CB0799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F904E87B1EFD05CE00CB0799 /* Main.storyboard */; };
+		F904E8861EFD11BE00CB0799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F904E8851EFD11BE00CB0799 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F904E8721EFD05CE00CB0799 /* WeatherStatus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherStatus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F904E8751EFD05CE00CB0799 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F904E8771EFD05CE00CB0799 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F904E8791EFD05CE00CB0799 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F904E8771EFD05CE00CB0799 /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
 		F904E87C1EFD05CE00CB0799 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F904E87E1EFD05CE00CB0799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F904E87F1EFD05CE00CB0799 /* WeatherStatus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WeatherStatus.entitlements; sourceTree = "<group>"; };
+		F904E8851EFD11BE00CB0799 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +54,8 @@
 			isa = PBXGroup;
 			children = (
 				F904E8751EFD05CE00CB0799 /* AppDelegate.swift */,
-				F904E8771EFD05CE00CB0799 /* ViewController.swift */,
-				F904E8791EFD05CE00CB0799 /* Assets.xcassets */,
+				F904E8771EFD05CE00CB0799 /* WeatherVC.swift */,
+				F904E8851EFD11BE00CB0799 /* Assets.xcassets */,
 				F904E87B1EFD05CE00CB0799 /* Main.storyboard */,
 				F904E87E1EFD05CE00CB0799 /* Info.plist */,
 				F904E87F1EFD05CE00CB0799 /* WeatherStatus.entitlements */,
@@ -121,7 +121,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F904E87A1EFD05CE00CB0799 /* Assets.xcassets in Resources */,
+				F904E8861EFD11BE00CB0799 /* Assets.xcassets in Resources */,
 				F904E87D1EFD05CE00CB0799 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -133,7 +133,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F904E8781EFD05CE00CB0799 /* ViewController.swift in Sources */,
+				F904E8781EFD05CE00CB0799 /* WeatherVC.swift in Sources */,
 				F904E8761EFD05CE00CB0799 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +204,7 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -251,6 +252,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
