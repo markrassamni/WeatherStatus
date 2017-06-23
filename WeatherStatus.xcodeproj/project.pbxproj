@@ -11,6 +11,8 @@
 		F904E8781EFD05CE00CB0799 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F904E8771EFD05CE00CB0799 /* WeatherVC.swift */; };
 		F904E87D1EFD05CE00CB0799 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F904E87B1EFD05CE00CB0799 /* Main.storyboard */; };
 		F904E8861EFD11BE00CB0799 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F904E8851EFD11BE00CB0799 /* Assets.xcassets */; };
+		F904E88C1EFD178F00CB0799 /* WeatherCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F904E88B1EFD178F00CB0799 /* WeatherCell.xib */; };
+		F904E88E1EFD17BE00CB0799 /* WeatherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F904E88D1EFD17BE00CB0799 /* WeatherCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,8 @@
 		F904E87E1EFD05CE00CB0799 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F904E87F1EFD05CE00CB0799 /* WeatherStatus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WeatherStatus.entitlements; sourceTree = "<group>"; };
 		F904E8851EFD11BE00CB0799 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
+		F904E88B1EFD178F00CB0799 /* WeatherCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherCell.xib; sourceTree = "<group>"; };
+		F904E88D1EFD17BE00CB0799 /* WeatherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,14 +57,48 @@
 		F904E8741EFD05CE00CB0799 /* WeatherStatus */ = {
 			isa = PBXGroup;
 			children = (
+				F904E8891EFD175000CB0799 /* Model */,
+				F904E8881EFD174C00CB0799 /* View */,
+				F904E8871EFD174500CB0799 /* Controller */,
+				F904E88A1EFD176900CB0799 /* Xibs */,
 				F904E8751EFD05CE00CB0799 /* AppDelegate.swift */,
-				F904E8771EFD05CE00CB0799 /* WeatherVC.swift */,
 				F904E8851EFD11BE00CB0799 /* Assets.xcassets */,
 				F904E87B1EFD05CE00CB0799 /* Main.storyboard */,
 				F904E87E1EFD05CE00CB0799 /* Info.plist */,
 				F904E87F1EFD05CE00CB0799 /* WeatherStatus.entitlements */,
 			);
 			path = WeatherStatus;
+			sourceTree = "<group>";
+		};
+		F904E8871EFD174500CB0799 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F904E8771EFD05CE00CB0799 /* WeatherVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F904E8881EFD174C00CB0799 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F904E88D1EFD17BE00CB0799 /* WeatherCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F904E8891EFD175000CB0799 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F904E88A1EFD176900CB0799 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				F904E88B1EFD178F00CB0799 /* WeatherCell.xib */,
+			);
+			path = Xibs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +161,7 @@
 			files = (
 				F904E8861EFD11BE00CB0799 /* Assets.xcassets in Resources */,
 				F904E87D1EFD05CE00CB0799 /* Main.storyboard in Resources */,
+				F904E88C1EFD178F00CB0799 /* WeatherCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +174,7 @@
 			files = (
 				F904E8781EFD05CE00CB0799 /* WeatherVC.swift in Sources */,
 				F904E8761EFD05CE00CB0799 /* AppDelegate.swift in Sources */,
+				F904E88E1EFD17BE00CB0799 /* WeatherCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
