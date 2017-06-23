@@ -844,6 +844,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Clear" width="256" height="256"/>
+        <image name="Clear" width="107" height="107"/>
     </resources>
 </document>
