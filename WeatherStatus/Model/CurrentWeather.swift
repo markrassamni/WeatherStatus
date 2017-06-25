@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class CurrentWeather {
     
@@ -49,28 +50,18 @@ class CurrentWeather {
     
     class func loadCurrentWeatherFromData(_ APIData: Data) -> CurrentWeather{
         let currentWeather = CurrentWeather()
+        let swiftyJSON = JSON(data: APIData)
         
-        do {
-            let myJSON = try JSONSerialization.jsonObject(with: APIData, options: .mutableContainers)
-            if let dict = myJSON as? Dictionary<String, AnyObject>{
-                if let name = dict["name"] as? String {
-                    currentWeather.cityName = name
-                }
-                if let weather = dict["weather"] as? [Dictionary<String, AnyObject>]{
-                    if let main = weather[0]["main"] as? String{
-                        currentWeather.weatherType = main
-                    }
-                }
-                if let main = dict["main"] as? Dictionary<String, AnyObject>{
-                    if let currentTemp = main["temp"] as? Int{
-                        currentWeather.currentTemp = currentTemp
-                    }
-                }
-                currentWeather.date = "Today"
-            }
-        } catch let error as NSError{
-            print(error)
-        }
+        currentWeather.cityName = swiftyJSON["name"].stringValue.capitalized
+        currentWeather.weatherType = swiftyJSON["weather"][0]["main"].stringValue.capitalized
+        currentWeather.currentTemp = swiftyJSON["main"]["temp"].intValue
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .none
+        let currentDate = dateFormatter.string(from: Date())
+        currentWeather.date = "Today, \(currentDate)"
+        
         
         return currentWeather
     }

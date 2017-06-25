@@ -21,7 +21,7 @@ class WeatherService {
         }
     }
     
-    func downloadWeatherDetails(){
+    func downloadWeatherDetails(completed: @escaping DownloadComplete){
         let url = URL(string: API_URL_CURRENT_WEATHER)
         Alamofire.request(url!).responseData{ (response) in
             if let JSON = response.result.value{
@@ -29,6 +29,9 @@ class WeatherService {
                 self.currentWeather = CurrentWeather.loadCurrentWeatherFromData(response.data!)
                 print(self.currentWeather.cityName)
                 print(self.currentWeather.weatherType)
+                print(self.currentWeather.currentTemp)
+                print(self.currentWeather.date)
+                completed()
             } else {
                 print("Could not get JSON")
             }
