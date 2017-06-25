@@ -23,6 +23,10 @@
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rMM-gz-0B7">
                     <rect key="frame" x="6" y="4" width="33" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="29" id="hUU-Tp-7AW"/>
+                        <constraint firstAttribute="height" constant="23" id="yAr-BK-wWJ"/>
+                    </constraints>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="100°" id="xqZ-ct-V1a">
                         <font key="font" size="13" name="AvenirNext-DemiBold"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -31,6 +35,10 @@
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Hbl-CN-n0O">
                     <rect key="frame" x="86" y="4" width="33" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="23" id="AKc-Ye-CHI"/>
+                        <constraint firstAttribute="width" constant="29" id="pWy-ge-6b5"/>
+                    </constraints>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="110°" id="zcH-9l-eI7">
                         <font key="font" size="13" name="AvenirNext-DemiBold"/>
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
