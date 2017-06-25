@@ -16,6 +16,8 @@ class WeatherVC: NSViewController {
     @IBOutlet weak var weatherImg: NSImageView!
     @IBOutlet weak var weatherConditionLbl: NSTextField!
     @IBOutlet weak var collectionView: NSCollectionView!
+    @IBOutlet weak var poweredByBtn: NSButton!
+    @IBOutlet weak var quitBtn: NSButton!
     
 
     override func viewDidLoad() {
@@ -29,8 +31,21 @@ class WeatherVC: NSViewController {
     override func viewDidAppear() {
         self.view.layer?.backgroundColor = CGColor(red: 0.29, green: 0.72, blue: 0.98, alpha: 1.0)
         updateUI()
+        quitBtn.styleButtonText(button: quitBtn, buttonName: "Quit", fontColor: .darkGray, alignment: .center, font: "Avenir Next", size: 11)
+        poweredByBtn.styleButtonText(button: poweredByBtn, buttonName: "Powered by OpenWeatherMap", fontColor: .darkGray, alignment: .center, font: "Avenir Next", size: 11)
         
     }
+    
+    @IBAction func poweredByBtnPressed(_ sender: Any) {
+        let url = URL(string: API_HOME_PAGE)
+        NSWorkspace.shared.open(url!)
+    }
+    
+    @IBAction func quitBtnPressed(_ sender: Any) {
+        NSApplication.shared.terminate(nil)
+    }
+    
+    
 
     func updateUI(){
         let weather = WeatherService.instance.currentWeather
@@ -47,13 +62,14 @@ class WeatherVC: NSViewController {
 
 extension WeatherVC: NSCollectionViewDelegate, NSCollectionViewDataSource, NSCollectionViewDelegateFlowLayout {
     
-//    func collectionView(_ collectionView: NSCollectionView, willDisplay item: NSCollectionViewItem, forRepresentedObjectAt indexPath: IndexPath) {
-//
-//    }
-    
     func collectionView(_ collectionView: NSCollectionView, itemForRepresentedObjectAt indexPath: IndexPath) -> NSCollectionViewItem {
-        let forcastItem = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "WeatherCell"), for: indexPath)
-        return forcastItem
+        let forecastItem = collectionView.makeItem(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: "WeatherCell"), for: indexPath)
+        
+        guard let forecastCell = forecastItem as? WeatherCell else { return forecastItem }
+        
+        forecastCell.configureCell(weatherCell: WeatherService.instance.forecast[indexPath.item])
+        
+        return forecastCell
     }
     
     func numberOfSections(in collectionView: NSCollectionView) -> Int {
@@ -61,7 +77,7 @@ extension WeatherVC: NSCollectionViewDelegate, NSCollectionViewDataSource, NSCol
     }
     
     func collectionView(_ collectionView: NSCollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 7
+        return WeatherService.instance.forecast.count
     }
     
     func collectionView(_ collectionView: NSCollectionView, layout collectionViewLayout: NSCollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> NSSize {

@@ -21,6 +21,7 @@
 		F904E8B41EFDA01100CB0799 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = F904E8B31EFDA01100CB0799 /* CurrentWeather.swift */; };
 		F9494F3E1EFF65FB00F91E3C /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9494F3D1EFF65FB00F91E3C /* Forecast.swift */; };
 		F9494F481EFF689200F91E3C /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9494F471EFF689200F91E3C /* NSDate.swift */; };
+		F9494F4A1F00300D00F91E3C /* NSButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9494F491F00300D00F91E3C /* NSButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +116,7 @@
 		F904E8B31EFDA01100CB0799 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		F9494F3D1EFF65FB00F91E3C /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
 		F9494F471EFF689200F91E3C /* NSDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSDate.swift; sourceTree = "<group>"; };
+		F9494F491F00300D00F91E3C /* NSButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +254,7 @@
 			isa = PBXGroup;
 			children = (
 				F9494F471EFF689200F91E3C /* NSDate.swift */,
+				F9494F491F00300D00F91E3C /* NSButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 				F904E88E1EFD17BE00CB0799 /* WeatherCell.swift in Sources */,
 				F904E8B41EFDA01100CB0799 /* CurrentWeather.swift in Sources */,
 				F9494F481EFF689200F91E3C /* NSDate.swift in Sources */,
+				F9494F4A1F00300D00F91E3C /* NSButton.swift in Sources */,
 				F904E8911EFD222D00CB0799 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
