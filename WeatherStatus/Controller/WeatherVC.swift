@@ -18,6 +18,9 @@ class WeatherVC: NSViewController {
     @IBOutlet weak var collectionView: NSCollectionView!
     @IBOutlet weak var poweredByBtn: NSButton!
     @IBOutlet weak var quitBtn: NSButton!
+    @IBOutlet weak var maxTempLbl: NSTextField!
+    @IBOutlet weak var minTempLbl: NSTextField!
+    
     
 
     override func viewDidLoad() {
@@ -60,6 +63,8 @@ class WeatherVC: NSViewController {
         let weather = WeatherService.instance.currentWeather
         dateLbl.stringValue = weather.date
         tempLbl.stringValue = "\(weather.currentTemp)°"
+        minTempLbl.stringValue = "\(weather.lowTemp)°"
+        maxTempLbl.stringValue = "\(weather.highTemp)°"
         cityLbl.stringValue = weather.cityName
         weatherConditionLbl.stringValue = weather.weatherType
         weatherImg.image = NSImage(named: NSImage.Name(rawValue: weather.weatherType))

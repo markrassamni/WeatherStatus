@@ -15,6 +15,8 @@ class CurrentWeather {
     fileprivate var _date: String!
     fileprivate var _weatherType: String!
     fileprivate var _currentTemp: Int!
+    fileprivate var _lowTemp: Int!
+    fileprivate var _highTemp: Int!
     
     var cityName: String {
         get{
@@ -48,6 +50,22 @@ class CurrentWeather {
         }
     }
     
+    var lowTemp: Int {
+        get{
+            return _lowTemp
+        } set{
+            _lowTemp = newValue
+        }
+    }
+    
+    var highTemp: Int{
+        get{
+            return _highTemp
+        } set{
+            _highTemp = newValue
+        }
+    }
+    
     class func loadCurrentWeatherFromData(_ APIData: Data) -> CurrentWeather{
         let currentWeather = CurrentWeather()
         let swiftyJSON = JSON(data: APIData)
@@ -55,6 +73,8 @@ class CurrentWeather {
         currentWeather.cityName = swiftyJSON["name"].stringValue.capitalized
         currentWeather.weatherType = swiftyJSON["weather"][0]["main"].stringValue.capitalized
         currentWeather.currentTemp = swiftyJSON["main"]["temp"].intValue
+        currentWeather.lowTemp = swiftyJSON["main"]["temp_min"].intValue
+        currentWeather.highTemp = swiftyJSON["main"]["temp_max"].intValue
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = .long
