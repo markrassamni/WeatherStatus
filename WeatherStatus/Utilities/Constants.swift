@@ -10,5 +10,7 @@ import Foundation
 
 typealias DownloadComplete = () -> ()
 
-let API_KEY = "73d25876370dcdca2a9580bf2014a81d"
-let API_URL_CURRENT_WEATHER = "http://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=\(API_KEY)"
+let API_KEY = "&appid=73d25876370dcdca2a9580bf2014a81d"
+let API_UNITS = "&units=imperial"
+let API_URL_CURRENT_WEATHER = "http://api.openweathermap.org/data/2.5/weather?lat=32.77&lon=-117.08\(API_KEY)\(API_UNITS)"
+let API_URL_FORECAST = "http://api.openweathermap.org/data/2.5/forecast/daily?lat=32.77&lon=-117.08&cnt=8\(API_UNITS)\(API_KEY)"

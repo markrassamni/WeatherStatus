@@ -28,13 +28,18 @@ class WeatherVC: NSViewController {
     
     override func viewDidAppear() {
         self.view.layer?.backgroundColor = CGColor(red: 0.29, green: 0.72, blue: 0.98, alpha: 1.0)
+        updateUI()
         
     }
 
-    override var representedObject: Any? {
-        didSet {
-        // Update the view, if already loaded.
-        }
+    func updateUI(){
+        let weather = WeatherService.instance.currentWeather
+        dateLbl.stringValue = weather.date
+        tempLbl.stringValue = "\(weather.currentTemp)°"
+        cityLbl.stringValue = weather.cityName
+        weatherConditionLbl.stringValue = weather.weatherType
+        weatherImg.image = NSImage(named: NSImage.Name(rawValue: weather.weatherType))
+        
     }
 
 

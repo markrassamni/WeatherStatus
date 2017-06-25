@@ -19,6 +19,8 @@
 		F904E8AC1EFD274700CB0799 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F904E8A21EFD269B00CB0799 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F904E8B21EFD27A400CB0799 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F904E8B11EFD27A400CB0799 /* WeatherService.swift */; };
 		F904E8B41EFDA01100CB0799 /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = F904E8B31EFDA01100CB0799 /* CurrentWeather.swift */; };
+		F9494F3E1EFF65FB00F91E3C /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9494F3D1EFF65FB00F91E3C /* Forecast.swift */; };
+		F9494F481EFF689200F91E3C /* NSDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9494F471EFF689200F91E3C /* NSDate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,8 @@
 		F904E8921EFD269A00CB0799 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		F904E8B11EFD27A400CB0799 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		F904E8B31EFDA01100CB0799 /* CurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		F9494F3D1EFF65FB00F91E3C /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		F9494F471EFF689200F91E3C /* NSDate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSDate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +174,7 @@
 				F904E8871EFD174500CB0799 /* Controller */,
 				F904E8B01EFD279500CB0799 /* Services */,
 				F904E88F1EFD221900CB0799 /* Utilities */,
+				F9494F461EFF688200F91E3C /* Extensions */,
 				F904E88A1EFD176900CB0799 /* Xibs */,
 				F904E8751EFD05CE00CB0799 /* AppDelegate.swift */,
 				F904E8851EFD11BE00CB0799 /* Assets.xcassets */,
@@ -200,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				F904E8B31EFDA01100CB0799 /* CurrentWeather.swift */,
+				F9494F3D1EFF65FB00F91E3C /* Forecast.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -240,6 +246,14 @@
 				F904E8B11EFD27A400CB0799 /* WeatherService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		F9494F461EFF688200F91E3C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F9494F471EFF689200F91E3C /* NSDate.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -427,9 +441,11 @@
 			files = (
 				F904E8B21EFD27A400CB0799 /* WeatherService.swift in Sources */,
 				F904E8781EFD05CE00CB0799 /* WeatherVC.swift in Sources */,
+				F9494F3E1EFF65FB00F91E3C /* Forecast.swift in Sources */,
 				F904E8761EFD05CE00CB0799 /* AppDelegate.swift in Sources */,
 				F904E88E1EFD17BE00CB0799 /* WeatherCell.swift in Sources */,
 				F904E8B41EFDA01100CB0799 /* CurrentWeather.swift in Sources */,
+				F9494F481EFF689200F91E3C /* NSDate.swift in Sources */,
 				F904E8911EFD222D00CB0799 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
